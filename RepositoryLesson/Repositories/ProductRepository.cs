@@ -1,5 +1,4 @@
 ﻿using RepositoryLesson.Interfaces;
-using RepositoryLesson.ModelDto;
 using RepositoryLesson.Models;
 
 namespace RepositoryLesson.Repositories

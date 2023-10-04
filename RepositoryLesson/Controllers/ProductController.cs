@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RepositoryLesson.Interfaces;
-using RepositoryLesson.ModelDto;
 using RepositoryLesson.Models;
 
 namespace RepositoryLesson.Controllers
 {
-	public class ProductController : Controller
+    public class ProductController : Controller
 	{
 		private readonly IProductRepository _repository;
 

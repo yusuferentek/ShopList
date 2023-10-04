@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yusuferen\\source\\repos\\RepositoryLesson\\RepositoryLesson\\RepositoryLesson.csproj": {}
+    "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yusuferen\\source\\repos\\RepositoryLesson\\RepositoryLesson\\RepositoryLesson.csproj": {
+    "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yusuferen\\source\\repos\\RepositoryLesson\\RepositoryLesson\\RepositoryLesson.csproj",
+        "projectUniqueName": "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj",
         "projectName": "RepositoryLesson",
-        "projectPath": "C:\\Users\\yusuferen\\source\\repos\\RepositoryLesson\\RepositoryLesson\\RepositoryLesson.csproj",
+        "projectPath": "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj",
         "packagesPath": "C:\\Users\\yusuferen\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yusuferen\\source\\repos\\RepositoryLesson\\RepositoryLesson\\obj\\",
+        "outputPath": "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\yusuferen\\AppData\\Roaming\\NuGet\\NuGet.Config",
