@@ -1,4 +1,4 @@
-﻿@model List<Products>
+﻿@model List<Categories>
 
 
 <!DOCTYPE html>
@@ -20,37 +20,29 @@
     <div class="container">
 
         <h2 style="position:center">Ürün Ekle</h2>
+        <br />
         <form action="AddProduct" method="post">
             <div class="mb-3">
+
                 <div class="mb3">
                     <label class="form-label">Ürün Adı</label>
                     <input type="text" class="form-control" name="ProductName">
                 </div>
-
-                
-                <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown button
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                @foreach(var item in Model)
-                {
-                <li><a class="dropdown-item" href="#">@item.ProductName</a></li>
-                }
-
-                @* <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-                </div> *@
-
-                <div class="mb-3">
-                    <label class="form-label">Kategori Adı</label>
-                    <input type="search" class="form-control" name="CategoryName">
-                </div>
+                <br />
+                <label class="form-label">Kategori Seçiniz</label>
+                <select class="form-select" aria-label="Kategori seçiniz" name="CategoryId">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.Id">@item.CategoryName</option>
+                    }
+                </select>
+                <br />
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Ürün Fotoğrafı</label>
                     <input class="form-control" type="file" name="Photo">
                 </div>
+                <br />
+
             </div>
             <button type="submit" class="btn btn-primary">Ekle</button>
         </form>

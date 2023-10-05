@@ -8,14 +8,23 @@ namespace RepositoryLesson.Repositories
         public ProductRepository(ShoppingDbContext context) : base(context) { }
 
 
-        //public Products AddProduct(Products product, int categoryId)
-        //{
-        //    Products nProduct = new Products();
-        //    nProduct.IsPurchased = false;
-        //    nProduct.CategoryName=product.CategoryName;
-        //    nProduct.ProductName=product.ProductName;
-        //    nProduct.
-        //}
+        public List<Categories> getCategories()
+        {
+            List<Categories> categories = _context.Categories.ToList();
+            return categories;
+        }
+
+        public Categories getCategoryById(int? id)
+        {
+            Categories categories = _context.Categories.Where(x => x.Id == id).FirstOrDefault();
+            return categories;
+        }
+
+        public List<Products> getProducts()
+        {
+            List<Products> products = _context.Products.ToList();
+            return products;
+        }
 
     }
     

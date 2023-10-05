@@ -17,23 +17,27 @@ namespace RepositoryLesson.Controllers
 		[Authorize(Roles ="Admin")]
 		public IActionResult Product()
 		{
-			//ProductDto pDto = new ProductDto();
-			//var categoriess = new Categories();
-			//pDto.CategoryList = new 
-			return View(_repository.GetAll());
+			List<Products> products = _repository.GetAll().ToList();
+			for(int i = 0; i < products.Count; i++)
+			{
+				products[i].Category = _repository.getCategoryById(products[i].CategoryId);
+			}
+			return View(products);
 		}
 
         [Authorize(Roles = "Admin")]
         public IActionResult AddProduct()
         {
-			return View	();
+			List<Categories> categories= _repository.getCategories();
+			return View	(categories);
         }
 
         [Authorize(Roles ="Admin")]
 		[HttpPost]
 		public IActionResult AddProduct(Products product)
 		{
-			
+			product.Category = _repository.getCategoryById(product.CategoryId);
+			product.IsPurchased = false;
 			_repository.Add(product);
 			return RedirectToAction("Product");
 		}

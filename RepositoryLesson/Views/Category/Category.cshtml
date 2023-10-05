@@ -16,7 +16,13 @@
 <body>
 
     <div class="container">
-
+        <form action="AddCategory" method="post">
+            <div class="mb-3">
+                <label class="form-label">Kategori Adı</label>
+                <input type="text" class="form-control" name="CategoryName">
+            </div>
+            <button type="submit" class="btn btn-primary px-4 float-end mb-4">Ekle</button>
+        </form>
         <table class="table">
             <thead>
                 <tr>
@@ -48,14 +54,7 @@
             </tbody>
         </table>
         @* <button type="button" class="btn btn-success px-4 float-end mt-0" style="font-size: 20px; height: 40px;"><i class="bi bi-plus-square" style="padding-top:5px"></i></button> *@
-        <label>Kategori Ekle</label>
-        <form action="AddCategory" method="post">
-            <div class="mb-3">
-                <label class="form-label">Kategori Adı</label>
-                <input type="text" class="form-control" name="CategoryName">
-            </div>
-            <button type="submit" class="btn btn-primary">Ekle</button>
-        </form>
+        
     </div>
 
     <script>

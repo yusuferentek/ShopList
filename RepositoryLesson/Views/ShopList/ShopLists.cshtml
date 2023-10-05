@@ -30,6 +30,7 @@
                     <th scope="col" >Liste Adı</th>
                     <th scope="col">Liste Durumu</th>
                     <th scope="col" colspan="2">İşlem</th>
+                    <th scope="col">Durum</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,7 +58,7 @@
                         <td> <a href="@Url.Action("ListDetail","ListDetail",item)"><i class="bi bi-info-circle-fill text-info"></i></a> </td>
                         @if (item.ListStatus == 0)
                         {
-                            <td><a href="@Url.Action("GoShopping", item)"><button type="button" class="btn btn-success btn-sm px-4 float-end "><i class="bi bi-cart-check"></i></button></a></td>
+                            <td><a href="@Url.Action("GoShopping", item)"><button type="button" class="btn btn-success btn-sm px-4 "><i class="bi bi-cart-check"></i></button></a></td>
                         }
                     </tr>
 
