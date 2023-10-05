@@ -14,8 +14,10 @@
 </head>
 
 <body>
-    <a href="@Url.Action("AddShopListMap")"><button type="button" class="btn btn-success px-4 float-end mb-4">Ürün Ekle</button></a>
-
+    @if (ViewBag.ListStatus == 0)
+    {
+        <a href="@Url.Action("AddShopListMap")"><button type="button" class="btn btn-success px-4 float-end mb-4">Ürün Ekle</button></a>
+    }
     <div class="container">
         <form action="/ListDetail/CompleteShopping" method="post">
         <table class="table">

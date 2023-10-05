@@ -18,17 +18,18 @@ namespace RepositoryLesson.Controllers
 		}
 
 		[Authorize(Roles ="Admin")]
-		public IActionResult ListDetail(int Id)
+		public IActionResult ListDetail(Lists list)
 		{
 
-            List<ShopListProductMapping> prdcts = _repository.Find(a => a.ShopListId==Id).ToList();
+            List<ShopListProductMapping> prdcts = _repository.Find(a => a.ShopListId==list.Id).ToList();
 			for(int i=0; i < prdcts.Count; i++)
 			{
                 prdcts[i].Product = _repository.getProductById(prdcts[i].ProductId);
 				prdcts[i].Product.Category = _repository.getCategoryById(prdcts[i].Product.CategoryId);
             }
 
-            TempData["listId"]=Id;
+			ViewBag.ListStatus = list.ListStatus;
+            TempData["listId"]=list.Id;
 			return View(prdcts);
 		}
 

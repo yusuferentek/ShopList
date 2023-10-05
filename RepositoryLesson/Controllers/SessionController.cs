@@ -37,6 +37,7 @@ namespace RepositoryLesson.Controllers
             if(isAuth != null)
             {
                 HttpContext.Session.SetInt32("userID", isAuth.Id);
+                HttpContext.Session.SetString("Role", isAuth.Role);
                 HttpContext.Session.SetString("Token", repository.GenerateToken(user,tokenOption));
                 return RedirectToAction("ShopLists","ShopList");
             }else

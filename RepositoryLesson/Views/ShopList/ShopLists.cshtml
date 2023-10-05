@@ -47,18 +47,18 @@
                             <td>Aktif</td>
                         }else if(item.ListStatus == 1)
                         {
-                            <td>Pasif</td>
+                            <td>Alışveriş Tamamlandı</td>
                         }
                         else if (item.ListStatus == 2)
                         {
                             <td>Alışverişe Çıkıldı</td>
                         }
-                        else if (item.ListStatus == 3)
-                        {
-                            <td>Alışveriş Tamamlandı</td>
-                        }
 						<td> <a href="@Url.Action("Remove","ShopList", item)"><i class="bi bi-trash-fill text-danger"></i></a></td>
-                        <td> <a href="@Url.Action("ListDetail","ListDetail",new { Id = item.Id })"><i class="bi bi-info-circle-fill text-info"></i></a> </td>
+                        <td> <a href="@Url.Action("ListDetail","ListDetail",item)"><i class="bi bi-info-circle-fill text-info"></i></a> </td>
+                        @if (item.ListStatus == 0)
+                        {
+                            <td><a href="@Url.Action("GoShopping", item)"><button type="button" class="btn btn-success btn-sm px-4 float-end "><i class="bi bi-cart-check"></i></button></a></td>
+                        }
                     </tr>
 
                     i++;
