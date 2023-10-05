@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4BMmcTiczyOAe9LrnxeFKEX011zSzi2b4s4K+nByfsfwuUW1u3FNu3FlG7ke1iQdtrJDN70f0Gw1y3Ssg9y/zg==",
+  "dgSpecHash": "s437rp+Etyma2gp1EgOkGAcLEf3+d5bX/SvMFCL4YZi83Yho453JQpKWnNKGS/8UYw3oWxykkTeUW18/PazEeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yusuferen\\Source\\Repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj",
+  "projectFilePath": "C:\\Users\\yusuferen\\source\\repos\\ShopList\\RepositoryLesson\\RepositoryLesson.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yusuferen\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\yusuferen\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

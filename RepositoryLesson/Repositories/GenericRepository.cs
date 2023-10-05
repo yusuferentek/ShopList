@@ -49,5 +49,15 @@ namespace RepositoryLesson.Repositories
         {
             _context.Set<T>().RemoveRange(entities);
         }
+
+        public async void Update(T entity, int id)
+        {
+            T? entity2 = await _context.Set<T>().FindAsync(id);
+            if (entity2 != null)
+            {
+                _context.Entry(entity2).CurrentValues.SetValues(entity);
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model Products
+﻿@model List<Products>
 
 
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
                     <input type="text" class="form-control" name="ProductName">
                 </div>
 
-                @*
+                
                 <div class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown button
@@ -35,7 +35,7 @@
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                 @foreach(var item in Model)
                 {
-                <li><a class="dropdown-item" href="#">@item.CategoryName</a></li>
+                <li><a class="dropdown-item" href="#">@item.ProductName</a></li>
                 }
 
                 @* <li><a class="dropdown-item" href="#">Another action</a></li>

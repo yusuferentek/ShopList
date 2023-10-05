@@ -1,4 +1,4 @@
-﻿@model ShopListProductMapping
+﻿@model List<Products>
 
 
 <!DOCTYPE html>
@@ -22,10 +22,32 @@
         <h2 style="position:center">Ürün Ekle</h2>
         <form action="AddShopListMap" method="post">
             <div class="mb-3">
-                <div class="mb3">
+               @*  <div class="mb3">
                     <label class="form-label">Ürün Adı</label>
                     <input type="text" class="form-control" name="ProductName">
                 </div>
+ *@
+                <select class="form-select" aria-label="Ürün seçiniz" name="ProductId">
+                    
+                    @foreach(var item in Model)
+                    {
+                        <option value="@item.Id">@item.ProductName</option>
+                        
+                    }
+                </select>
+
+@* 
+
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ürünler
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        @foreach (var item in Model)
+                        {
+                            <li><a class="dropdown-item" href="#">@item.ProductName</a></li>
+                        }
+                </div> *@
                 <div class="mb3">
                     <label class="form-label">Ürün Açıklaması</label>
                     <input type="text" class="form-control" name="Description">

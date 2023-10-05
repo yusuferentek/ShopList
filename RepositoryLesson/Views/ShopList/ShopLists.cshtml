@@ -16,7 +16,13 @@
 <body>
 
     <div class="container">
-
+        <form action="ShopLists" method="post">
+            <div class="mb-3">
+                <label class="form-label">Liste Adı</label>
+                <input type="text" class="form-control" name="ListName">
+            </div>
+            <button type="submit" class="btn btn-primary px-4 float-end mb-4">Ekle</button>
+        </form>
         <table class="table">
             <thead>
                 <tr>
@@ -52,7 +58,7 @@
                             <td>Alışveriş Tamamlandı</td>
                         }
 						<td> <a href="@Url.Action("Remove","ShopList", item)"><i class="bi bi-trash-fill text-danger"></i></a></td>
-                        <td> <a href="@Url.Action("ListDetail","ListDetail", item)"><i class="bi bi-info-circle-fill text-info"></i></a> </td>
+                        <td> <a href="@Url.Action("ListDetail","ListDetail",new { Id = item.Id })"><i class="bi bi-info-circle-fill text-info"></i></a> </td>
                     </tr>
 
                     i++;
@@ -64,13 +70,7 @@
             </tbody>
         </table>
         @* <button type="button" class="btn btn-success px-4 float-end mt-0" style="font-size: 20px; height: 40px;"><i class="bi bi-plus-square" style="padding-top:5px"></i></button> *@
-        <form action="ShopLists" method="post">
-            <div class="mb-3">
-                <label class="form-label">Liste Adı</label>
-                <input type="text" class="form-control" name="ListName">
-            </div>
-            <button type="submit" class="btn btn-primary">Ekle</button>
-        </form>
+        
     </div>
 
     <script>

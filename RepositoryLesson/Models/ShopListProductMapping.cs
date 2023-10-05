@@ -8,8 +8,11 @@
 
         public string? Description { get; set; }
 
+        public bool? PurchaseStatus { get; set; }
+
         public virtual Products? Product { get; set; }
 
         public virtual Lists? ShopList { get; set; }
+
     }
 }
